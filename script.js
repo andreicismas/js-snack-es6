@@ -5,64 +5,65 @@
 
 
 const bici1 = {
-    nome: "biciDaCittà",
+    nome: "Bici Da Città",
     peso: 20
 }
 const bici2 = {
-    nome: "mountainBike",
+    nome: "Mountain Bike",
     peso: 50
 }
 const bici3 = {
-    nome: "biciDaCorsa",
+    nome: "Bici Da Corsa",
     peso: 23
 }
 const bici4 = {
-    nome: "biciDaCicloturismo",
+    nome: "Bici Da Cicloturismo",
     peso: 12
 }
 const bici5 = {
-    nome: "biciIbrida",
+    nome: "Bici Ibrida",
     peso: 32
 }
 const bici6 = {
-    nome: "biciaScattoFisso",
+    nome: "Bicia Scatto Fisso",
     peso: 31
 }
 const bici7 = {
-    nome: "biciPieghevole",
+    nome: "Bici Pieghevole",
     peso: 15
 }
 const bici8 = {
-    nome: "biciDaCiclocross",
+    nome: "Bici Da Ciclocross",
     peso: 68
 }
 const bici9 = {
-    nome: "gravelBike",
+    nome: "Gravel Bike",
     peso: 25
 }
 const bici10 = {
-    nome: "fatBike10",
+    nome: "Fat Bike 10",
     peso: 29
 }
 // array lista bici 
 const listaBici = [bici1, bici2, bici3, bici4, bici5, bici6, bici7, bici8, bici9, bici10]
+console.log(listaBici);
 
 // uso destructuring e template literal
 const { nome, peso } = bici4
-console.log(`la bici che pesa di meno e la :${nome} peso ${peso} kg`);
 
 
 
-// ciclo con nuovi nomi variabbili
+
+// ciclo con il arrai lista bici
 for (let i = 0; i < listaBici.length; i++) {
     const element = listaBici[i];
     const elementH1 = document.getElementById("small_weight")
-
+    
     if (element.peso < 15) {
-        console.log(`la bici che pesa di meno e la :${element.nome} peso ${element.peso} kg`);
-        elementH1.innerHTML= `la bici che pesa di meno e la :${element.nome} peso ${element.peso} kg`
+        console.log(`La bici che pesa di meno e la :${element.nome} peso ${element.peso} kg`);
+        elementH1.innerHTML= `La bici che pesa di meno e la : ${element.nome} peso ${element.peso} kg`
     }
-
+    
 }
 
 // mi sfuge una cosa come faccio a trovare la bici che pesa di meno senza che io so /non vedo i pesi delle bici 
