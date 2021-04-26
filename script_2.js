@@ -25,17 +25,24 @@ const squad4 = {
     faliSubiti: 0
 }
 const listaquadre = [squad1, squad2, squad3, squad4]
-
 const generaPunti = () => Math.floor(Math.random() * 100) + 1;
+const statistica = []
+console.log(statistica);
 
-
-console.log(`il nostro nr random:${generaPunti()}`);
 
 for (let i = 0; i < listaquadre.length; i++) {
-    const element = listaquadre[i];
+    let element = listaquadre[i];
 
     element.puntiFatti += generaPunti()
     element.faliSubiti += generaPunti()
     console.log(`le squadre sono: ${element.nome} - i loro punti fatti sono ${element.puntiFatti} - con falli subiti ${element.faliSubiti}`);
-
+    if (element.puntiFatti >= 0 ) {
+        statistica.push(`squad: ${element.nome}--- statistica fali: ${element.puntiFatti} `)
+    }
 }
+for (let j = 0; j < statistica.length; j++) {
+    const listaStatistica = statistica[j];
+    console.log(`${listaStatistica}`);
+    
+}
+
