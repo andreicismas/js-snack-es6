@@ -52,12 +52,15 @@ const { nome, peso } = bici4
 console.log(`la bici che pesa di meno e la :${nome} peso ${peso} kg`);
 
 
+
 // ciclo con nuovi nomi variabbili
 for (let i = 0; i < listaBici.length; i++) {
     const element = listaBici[i];
+    const elementH1 = document.getElementById("small_weight")
 
     if (element.peso < 15) {
         console.log(`la bici che pesa di meno e la :${element.nome} peso ${element.peso} kg`);
+        elementH1.innerHTML= `la bici che pesa di meno e la :${element.nome} peso ${element.peso} kg`
     }
 
 }
