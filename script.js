@@ -41,7 +41,7 @@ const bici9 = {
     peso: 25
 }
 const bici10 = {
-    nome: "fatBi10",
+    nome: "fatBike10",
     peso: 29
 }
 // array lista bici 
