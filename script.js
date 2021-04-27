@@ -47,24 +47,49 @@ const bici10 = {
 // array lista bici 
 const listaBici = [bici1, bici2, bici3, bici4, bici5, bici6, bici7, bici8, bici9, bici10]
 console.log(listaBici);
+// SOLUZIONE MIGLIORE CON LA FUNXTION
 
-// uso destructuring e template literal
-const { nome, peso } = bici4
+// ********************************************************************************************************
+const findMinBike = (arayList) => {
+    let biciLegera;
+    for (let i = 0; i < arayList.length; i++) {
+        const { nome, peso } = arayList[i];
 
+        if (!biciLegera || peso < biciLegera.peso) {
+            biciLegera = {
+                nome,
+                peso
+            }
+        }
 
-
-
-// ciclo con il arrai lista bici
-for (let i = 0; i < listaBici.length; i++) {
-    const element = listaBici[i];
-    const elementH1 = document.getElementById("small_weight")
-    
-    if (element.peso < 15) {
-        console.log(`La bici che pesa di meno e la :${element.nome} peso ${element.peso} kg`);
-        elementH1.innerHTML= `La bici che pesa di meno e la : ${element.nome} peso ${element.peso} kg`
     }
-    
+    return biciLegera
 }
+
+const biciLegeraTrovata = findMinBike(listaBici)
+console.log(biciLegeraTrovata);
+console.log(`La bici che pesa di meno e la :${biciLegeraTrovata.nome} peso ${biciLegeraTrovata.peso} kg`);
+
+// ********************************************************************************************************
+
+// SOLUZIONE SEMPLICE E PIGRA
+
+
+// // uso destructuring e template literal
+// const { nome, peso } = bici4
+
+// // ciclo con il arrai lista bici
+// for (let i = 0; i < listaBici.length; i++) {
+    //     const element = listaBici[i];
+    //     const elementH1 = document.getElementById("small_weight")
+    
+//     if (element.peso < 15) {
+//         console.log(`La bici che pesa di meno e la :${element.nome} peso ${element.peso} kg`);
+//         elementH1.innerHTML = `La bici che pesa di meno e la : ${element.nome} peso ${element.peso} kg`
+//     }
+
+// }
+
 
 // mi sfuge una cosa come faccio a trovare la bici che pesa di meno senza che io so /non vedo i pesi delle bici 
 
