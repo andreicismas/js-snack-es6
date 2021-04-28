@@ -67,9 +67,13 @@ const findMinBike = (arayList) => {
 }
 
 const biciLegeraTrovata = findMinBike(listaBici)
+
 console.log(biciLegeraTrovata);
+
 console.log(`La bici che pesa di meno e la :${biciLegeraTrovata.nome} peso ${biciLegeraTrovata.peso} kg`);
 
+const elementH1 = document.getElementById("small_weight")
+elementH1.innerHTML = `La bici che pesa di meno e la : ${biciLegeraTrovata.nome} peso ${biciLegeraTrovata.peso} kg`
 // ********************************************************************************************************
 
 // SOLUZIONE SEMPLICE E PIGRA
